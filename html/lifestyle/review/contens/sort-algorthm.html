@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Sort Algortham</title>
+	<link rel="icon" href="../../../images/cat.ico" type="image/x-icon" />
+	<meta name="description" content="Free Responsive Html5 Css3 Templates ">
+	<meta name="author" content="#">
+	
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">  
+    <link rel="stylesheet" href="highlight/styles/default.css">  
+    <script src="highlight/highlight.pack.js"></script>  
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+    <!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+	================================================== -->
+  	<link rel="stylesheet" href="../../../css/zerogrid.css">
+	<link rel="stylesheet" href="../../../css/style.css">
+	
+	<!-- Custom Fonts -->
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	
+	
+	<link rel="stylesheet" href="../../../css/menu.css">
+	<script src="../../../js/jquery1111.min.js" type="text/javascript"></script>
+	<script src="../../../js/script.js"></script>
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../../../owl-carousel/owl.carousel.css" rel="stylesheet">
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<div class="wrap-body">
+		<div id='cssmenu' class="align-center">
+			<ul>
+			   <li><a href='../../../index.html'><span>Home</span></a></li>
+			   <li class=' has-sub'><a href='#'><span>Blog</span></a>
+				  <ul >
+					 <li class='has-sub'><a href='#'><span>Technology</span></a>
+						<ul>
+						   <li><a href='#'><span>Summarize</span></a></li>
+						   <li class='last'><a href='#'><span>Learn More</span></a></li>
+						</ul>
+					 </li>
+					 <li class='has-sub'><a href='#'><span>Life</span></a>
+						<ul>
+						   <li><a href='#'><span>Philosophy</span></a></li>
+						   <li class='last'><a href='#'><span>Arts</span></a></li>
+						   <li class='last'><a href='#'><span>History</span></a></li>
+						</ul>
+					 </li>
+				  </ul>
+			   </li>
+			     <li class='last'><a href='../../../contact.html'><span>Contacts</span></a></li>
+			   <li class='active'><a href='../../../about.html'><span>About</span></a></li>
+			 
+			</ul>
+		</div>
+		<header class="">
+			<div class="logo">
+				<hr class="line-1">
+				<a href="#">Lee</a>
+				<span><strong>Write the code,Change the world</strong></span>
+				<hr class="line-1">
+			</div>
+		</header>
+		<!--////////////////////////////////////Container-->
+		<section id="container">
+			<div class="wrap-container">
+				<!-----------------Content-Box-------------------->
+				<article class="single-post zerogrid">
+					<div class="row wrap-post"><!--Start Box-->
+						<div class="entry-header">
+							<span class="time">Sep 14, 2017</span>
+							<h2 class="entry-title"><a href="##">Write the code ,Change the world</a></h2>
+							<span class="cat-links"><a href="#">attitude</a>, <a href="#">LIFESTYLE</a></span>
+						</div>
+						<div class="post-thumbnail-wrap">
+						<div class="post-thumbnail-wrap"></div>
+							<img src="../review-img/merge-sort-algorithm-diagram.png">
+						</div><br><br>
+			<h1>排序 ( 冒泡排序，选择排序，插入排序，快速排序 )</h1>			<br><h2>Ⅰ 冒泡排序（Bubble Sort）</h2>
+<p>冒泡排序的主要策略在于使用两层循环，外循环用于实现对数组中每个数字的遍历，内循环实现相邻数值的比较，这样每经过一次外循环（n-1-i次的内循环）；就使得小的数都放置与前面，但此时d的大小顺序并不是最准确的，我更喜欢把它描述为每次外循环后，总有一个最大的数处于最后面，这样描述的话就像最大的数一个一个从数组后面冒出。这是一种稳定的算法，复杂度是O（n<sup>2</sup>）</p>	<br><br>
+					<div class="post-thumbnail-wrap">
+						<img src="sort()/bubble-sort.png">
+						<p>图1-1 冒泡排序示例</p>
+					</div>	<br>				
+	<h3>代码</h3>	<br>				
+			<pre><code class="C++">
+#include &lt;iostream&lt;
+using namespace std;
+int sort(int arr[])
+{
+	for(int j=0;j&lt;9;j++)
+	{
+	   for(int n=0;n&lt;9-1-j;n++)      //内循环只执行9-1-j次即可,因为上一次的内循环使最大的数放在了后面。
+	   {
+	   	int m;
+	   	if(arr[n]&lt;arr[n+1])         //交换顺序
+	   	{
+	   		m=arr[n];
+	   		arr[n]=arr[n+1];
+	   		arr[n+1]=m;
+		   }
+
+		} 
+	
+	} 
+	
+	return 0;
+}
+int main(void)
+{
+	int arr[]={23,1,12,45,76,89,101,234,104};
+	
+	for(int i=0;i&lt;9;i++)
+	{cout&lt;&lt;arr[i]&lt;&lt;" ";}
+	
+	cout&lt;&lt;"\n";
+	sort(arr);
+	
+	for(int i=0;i&lt;9;i++)
+	{cout&lt;&lt;arr[i]&lt;&lt;" ";}
+	
+	return 0;
+}
+			</code></pre>
+			<br>
+			<h3>结果</h3> 
+			<br>			
+<pre><code class="C++">23 1 12 45 76 89 101 234 104
+1 12 23 45 76 89 101 104 234
+--------------------------------</code></pre>	<br><br>
+<h2>Ⅱ&nbsp; 选择排序（Selected Sort）</h2>
+	<p>选择排序的主要思想就是每扫描一次数组就把数组中最小的值放置到前面，从而实现数组的排序。但是这是一种不稳定的算法，因为如果遇到相等的值，它们的下标顺序就会改变。</p>		<div class="post-thumbnail-wrap">
+		<img src="sort()/slide_6.jpeg">
+		<p>图 2-1 选择排序示例</p>
+	</div>	
+	<h3>代码</h3>
+	<pre><code class="C++">
+#include "iostream"
+using namespace std;
+int sort(int arr[],int n)
+{
+	for(int m=0;m&lt;n-1;m++)
+	{
+		for(int j=m+1;j&lt;n;j++)
+		{
+			if(arr[m]&lt;arr[j])
+			{
+				int k=arr[m];
+				   arr[m]=arr[j];
+				   arr[j]=k;
+			}	
+		}
+	}
+	return 0;
+}
+int main(void)
+{
+	int arr[]={9,8,7,6,5,4,3,2,1,0};
+	for(int i=0;i&lt;10;i++)
+	cout&lt;&lt;arr[i]&lt;" ";
+	
+	sort(arr,10);
+	cout&lt;&lt;"\n";
+	for(int i=0;i&lt;10;i++)
+     cout&lt;&lt;arr[i]&lt;&lt;" ";	
+	
+	return 0;
+}</code></pre>
+				<br><br>
+					
+	<h3>结果</h3><br>
+	<pre><code class="C++">9 8 7 6 5 4 3 2 1 0
+0 1 2 3 4 5 6 7 8 9
+--------------------------------</code></pre>	
+					<br><br>
+<h2>&nbsp;Ⅲ&nbsp;插入排序 （Insert Sort） </h2>
+	<p>插入排序的实现方法，每次循环都找出数组未排序部分的最小值插入到已经排序的部分。听起来很难做，但是实际操作并不复杂；我们只需要依次将元素后移，为待排序的数值腾出空位即可，当前面遇到数字比这个数值大时，数组元素依次后移，直到有数组元素比它小时，将待插入数值放置在比它小的数组元素的后面，然后把该数值放置在最前面。</p>
+				<div class="post-thumbnail-wrap">
+					<img src="sort()/Insertion-Sort-Model11.jpg">
+					<p>图 3-1 插入排序示例</p>
+				</div>
+	<h3>代码</h3>
+	<pre><code class="C++">
+#include &lt;iostream>
+using namespace std;
+int sort(int arr[],int n)
+{
+	for(int i=1;i&lt;n;i++)
+	{
+		int j=i;
+		if(arr[i]&lt;arr[i-1])
+		{
+			int temp=arr[i];
+			while(j&gt;=0&&arr[j-1]&gt;temp)    //比待插入值大的数组元素依次后移，注意此时j就是插入的地方 
+			{
+				arr[j]=arr[j-1];
+				j--;		
+			}
+			arr[j]=temp;               //插入 
+		}	
+		return 0;
+}
+int main(void)
+{
+	int arr[]={9,8,7,6,5,4,3,2,1,0};
+	for(int i=0;i&lt;10;i++)
+	{cout&lt;&lt;arr[i]&lt;&lt;" ";}
+	
+	sort(arr,10);
+	cout&lt;&lt;"\n";
+	for(int i=0;i&lt;10 ;i++)
+	{cout&lt;&lt;arr[i]&lt;&lt;" ";}
+
+	return 0;
+}</code></pre>
+		<br><br>		
+	<h3>结果</h3>
+    <br>
+	<pre><code class="C++">9 8 7 6 5 4 3 2 1 0
+8 9 7 6 5 4 3 2 1 0
+--------------------------------</code></pre><br><br><br>
+				
+<h2>Ⅳ&nbsp;快速排序</h2>
+<p>快速排序是所有基于决策树（比较类）的最快的排序算法，它是对冒泡排序的改进；但是它的效率比冒泡排序较快，一般情况下的时间复杂度是：O(nlogn)。它的基本思想是通过一趟排序把一组数据分割成两个部分；其中一部分比基准数小，另一部分比基准数大（随机选取基准数的效率更高）；随后递归，数组即可变成有序数组。</p>
+				<div class="post-thumbnail-wrap"><br>
+					<img src="sort()/quicksort_tree.jpg">
+					<p>图3-1 基于决策树的快速排序</p>
+				</div>
+<h3>代码</h3>
+<pre><code class="C++">
+#include &lt;stdio.h&gt;
+#include &lt;iostream &gt;
+using namespace std;
+#define N 15 
+int partition(int arr[],int low,int high) {
+	int key=arr[low];
+	while(low&lt;high)         //low和high碰头为止 
+	{
+		while(low&lt;high&&arr[high]&gt;=key)      //high向前扫描直到有小于key的数为止 
+		high--;
+		if(low&lt;high)                         //将这个数赋给arr[low],同时low向后移 
+		{
+			     arr[low++]=arr[high];
+		}
+	
+		while(low&lt;high&&arr[low]&lt;=key)      //low向后扫描直到有大于key的数出现 
+		low++;                               
+		if(low&lt;high)                         
+		{
+			arr[high--]=arr[low];           //把这个大于key的数赋给arr[high],同时high向前移位 
+		}				
+	}
+	arr[low]=key;                           //此时low和high已经碰头，low==high，处于基准处，并返回这个位置 
+	return low;
+}
+ 
+ int quicksort(int arr[],int start,int end)
+ {
+ 	int pos;
+ 	if(start&lt;end)
+ 	{
+ 		pos=partition(arr,start,end);
+ 		quicksort(arr,start,pos-1);   //留住每一个pos在数组中的位置；左右两个部分分别递归 
+ 		quicksort(arr,pos+1,end);
+ 	 }
+ 	
+ 	return 0;
+ }
+int main(void)
+{
+    int arr[N]={12,3,4,1,34,74,100,21,54,232,23,46,78,29,66};
+	for(int h=0;h&lt;N;h++)
+	cout&lt;&lt;arr[h]&lt;&lt;"   ";
+	cout&lt;&lt;"\n";
+	
+	quicksort(arr,0,N-1);
+	
+	for(int h=0;h&lt;&lt;N;h++)
+	cout&lt;&lt;arr[h]&lt;&lt;"   ";
+	cout&lt;&lt;"\n";
+	
+     return 0;
+} </code></pre>
+		<br><br>	
+<h3>结果</h3>
+<pre><code class="C++">
+	12   3   4   1   34   74   100   21   54   232   23   46   78   29   66
+      1   3   4   12   21   23   29   34   46   54   66   74   78   100   232
+
+--------------------------------
+</code></pre>
+					
+						
+</div>
+				</article>
+				<div class="zerogrid">
+					<div class="comments-are">
+						<div id="comment">
+							<h3>Leave a Reply</h3>
+							<span>Concat to my world  ,  know more about me and my scool life ,  send me your suggestions </span>
+							<form name="form1" id="comment_form" method="post" action="">
+								<label>
+								<span>Comment:</span>
+								<textarea name="message" id="message"></textarea>
+								</label>
+								<label>
+								<span>Name:</span>
+								<input type="text"  name="name" id="name" required>
+								</label>
+								<label>
+								<span>Email:</span>
+								<input type="email"  name="email" id="email" required>
+								</label>
+								<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--////////////////////////////////////Footer-->
+		<footer>
+			<div class="zerogrid wrap-footer">
+				<div class="row">
+					<div class="bottom-social">
+						<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+						<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="https://github.com/" target="_blank"><i class="fa fa-github-square"></i></a>
+						
+					</div>
+				</div>
+				<div class="copyright">
+					Copyright @ - Lee - All right reserved&nbsp;&nbsp;&nbsp;&nbsp;<a href="">LeeGradylll@Gmail.com</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

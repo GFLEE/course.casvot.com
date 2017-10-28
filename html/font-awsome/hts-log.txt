@@ -1,0 +1,14 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 15 Oct 2017 18:08:28 at http://fontawesome.dashgame.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "zh, en, *" http://fontawesome.dashgame.com/ -O1 "C:\Users\Administrator\Desktop\font-awsome\font-awsome" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:09:44	Warning: 	File not parsed, looks like binary: fontawesome.dashgame.com/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+18:09:44	Warning: 	File not parsed, looks like binary: fontawesome.dashgame.com/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0
+18:09:44	Error: 	"Not Found" (404) at link fontawesome.dashgame.com/Popover requires tooltip.js (from apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 17 seconds : 26 links scanned, 24 files written (2525131 bytes overall) [2416282 bytes received at 31380 bytes/sec], 182204 bytes transferred using HTTP compression in 7 files, ratio 34%, 1.4 requests per connection
+(1 errors, 2 warnings, 0 messages)

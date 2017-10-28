@@ -1,0 +1,22 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 15 Oct 2017 11:37:12 at http://v3.bootcss.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "zh, en, *" http://v3.bootcss.com/ -O1 "C:\Users\Administrator\Desktop\bootstrap\bootsrap3" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/alert.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/button.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/carousel.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/dropdown.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/modal.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/tooltip.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/tab.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/affix.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/collapse.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/scrollspy.js (from v3.bootcss.com/customize/)
+11:39:20	Error: 	"Not Found" (404) at link v3.bootcss.com/customize/transition.js (from v3.bootcss.com/customize/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 8 seconds : 117 links scanned, 105 files written (5871157 bytes overall) [3254922 bytes received at 25429 bytes/sec], 3769677 bytes transferred using HTTP compression in 61 files, ratio 28%, 5.8 requests per connection
+(11 errors, 0 warnings, 0 messages)
